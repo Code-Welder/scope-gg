@@ -1,0 +1,66 @@
+@import '../../../styles/variables';
+
+.sect {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 52px;
+  transition: opacity 1s;
+}
+
+.inner {
+  max-width: 920px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.info {
+  max-width: 425px;
+  margin-left: auto;
+  text-align: right;
+  letter-spacing: -0.02em;
+}
+
+.titleBattle {
+  width: 100%;
+}
+
+.choice {
+  margin-top: 24px;
+  // color: $white50;
+}
+
+.pick {
+  display: flex;
+}
+
+.pickSide {
+  &:nth-child(1) {
+    margin-right: auto;
+
+    .teamName {
+      margin-left: 20px;
+    }
+  }
+
+  &:nth-child(2) {
+    .teamName {
+      margin-right: 20px;
+    }
+  }
+}
+
+.bottom {
+  margin: 148px auto 0;
+}
+
+.participants {
+  margin-right: 36px;
+}

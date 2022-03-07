@@ -1,0 +1,43 @@
+@import './variables';
+
+.btn {
+  border-radius: 48px;
+  background-color: transparent;
+  transition: background .25s;
+
+  &--neutral {
+    background-color: $--color-white10;
+    color: $--color-white;
+
+    &:hover {
+      background-color: $--color-white30;
+    }
+  }
+
+  &--t1 {
+    border: 2px solid $--color-team-1;
+    color: $--color-team-1;
+
+    &:hover {
+      background-color: rgba($--color-team-1, .2);
+    }
+  }
+
+  &--t2 {
+    border: 2px solid $--color-team-2;
+    color: $--color-team-2;
+
+    &:hover {
+      background-color: rgba($--color-team-2, .2);
+    }
+  }
+
+  &--neutral {
+    background-color: $--color-white10;
+    color: $--color-white;
+
+    &:hover {
+      background-color: $--color-white30;
+    }
+  }
+}

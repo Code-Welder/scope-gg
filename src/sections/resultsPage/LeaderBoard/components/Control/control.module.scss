@@ -1,0 +1,64 @@
+@import '../../../../../styles/variables';
+
+.bar {
+  display: flex;
+  align-items: center;
+}
+
+.title {  
+  color: $--color-white50;
+}
+
+.team {
+  margin-right: auto;
+
+  &__btn {
+    font-size: 16px;
+    padding: 10px 14px;
+    border: 1px solid $--color-white10;
+  
+    &:first-of-type {
+      margin: 0 8px 0 24px;
+    }  
+  
+    &:hover {
+      background-color: $--color-white10;
+    }
+  }
+}
+
+.days {
+  display: flex;
+  align-items: center;
+}
+
+.daysBtns {
+  margin-left: 24px;
+  font-size: 16px;
+}
+
+.daysBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid $--color-white10;
+  margin-right: 8px;
+  transition: background .25s;
+
+  &:hover {
+    background-color: $--color-white10;
+  }
+
+  &:global(.active) {
+    background-color: $--color-white10;
+  }
+}
+  
+.active {
+  background-color: $--color-white10 !important;
+}
+
+.disabled {
+  opacity: .2;
+  pointer-events: none;
+}

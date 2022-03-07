@@ -1,0 +1,32 @@
+@import '../../../../../styles/variables';
+
+.container {
+  &:nth-of-type(1) {
+    max-width: 424px;
+    margin-right: 20px;
+  }
+  
+  &:nth-of-type(2) {
+    max-width: 377px;
+    margin: 228px 0 0 auto;
+  }
+}
+
+.title {
+  display: flex;
+  flex-flow: column;
+}
+
+.titleTop,
+.titleBottom {
+  font-size: 44px;
+  line-height: 55px;
+}
+
+.underHeading {
+  margin: 12px 0 52px;
+}
+
+.descr {
+  margin-bottom: 64px;
+}

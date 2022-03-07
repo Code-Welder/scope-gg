@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Orbitron:wght@800;900&display=swap');
+
+@import-normalize;
+@import './styles/reset';
+@import './styles/global.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $--color-app-bg;
+  font: 600 20px/148% $--font-primary;
+  color: $--color-white;
+  letter-spacing: -0.02em;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+#root {
+  display: flex;
+  flex-flow: column;
+}

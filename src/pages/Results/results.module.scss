@@ -1,0 +1,11 @@
+@import '../../styles/variables';
+
+.container {
+  padding: 120px 0 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.show {
+  opacity: 1;
+}

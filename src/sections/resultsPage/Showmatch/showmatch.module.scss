@@ -1,0 +1,66 @@
+@import '../../../styles/variables';
+
+.sect {
+  margin-top: 110px;
+}
+
+.inner {
+  max-width: 920px;
+  width: 100%;
+  margin: auto;
+}
+
+.title {  
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.lists {
+  display: flex;
+  margin-bottom: 72px;
+}
+
+.list {
+  min-width: 340px;
+  display: flex;
+  flex-flow: column;
+
+  &:nth-child(1) {
+    margin-right: auto;
+  }
+
+  &__top {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 13px 20px;
+    background-color: $--color-white10;
+    border-radius: 48px;
+    margin-bottom: 32px;
+
+    span {
+      margin-right: 8px;
+    }
+  }
+}
+
+.leader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__steam {
+    margin-left: auto;
+    color: $--color-white30;
+    transition: color .25s;
+    font-size: 16px;
+
+    &:hover {
+      color: $--color-white;
+    }
+  }
+}

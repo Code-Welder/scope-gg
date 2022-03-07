@@ -1,0 +1,135 @@
+@import '../../../styles/variables';
+
+.sect {
+  padding-top: 112px;
+  padding-bottom: 130px;
+  display: flex;
+  transition: opacity 1s;
+}
+
+.inner {
+  padding-left: 36px;
+  padding-right: 42px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+}
+
+.note {
+  color: $--color-white50;
+}
+
+.header {
+  margin-bottom: 176px;
+}
+
+.title {
+  font: 900 208px/125% $--font-secondary;
+  text-transform: uppercase;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.arrow {  
+  display: inline-block;
+  width: 98px;
+  height: 144px;
+  margin-left: 110px;
+  background-color: $--color-white;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+}
+
+.body {  
+  max-width: 754px;
+  margin-left: 463px;
+}
+
+.info {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.descr {
+  max-width: 351px;
+  width: 100%;
+  margin-right: 112px;
+}
+
+.streamTitle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.streamIcon {
+  margin-right: 10px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(50px);
+  opacity: .6;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    top: -20%;
+    left: 2%;
+    width: 20%;
+    padding-bottom: 20%;
+    background-color: $--color-team-2;
+  }
+
+  &:nth-child(2) {
+    top: 40%;
+    left: 20%;
+    width: 23%;
+    padding-bottom: 23%;
+    background-color: $--color-team-2;
+  }
+
+  &:nth-child(3) {
+    top: 56%;
+    left: 6%;
+    width: 15%;
+    padding-bottom: 15%;
+    background-color: $--color-team-2;
+  }
+
+  &:nth-child(4) {
+    top: -30%;
+    right: 20%;
+    width: 18%;
+    padding-bottom: 18%;
+    background-color: $--color-team-1;
+  }
+
+  &:nth-child(5) {
+    top: 40%;
+    right: 3%;
+    width: 26%;
+    padding-bottom: 26%;
+    background-color: $--color-team-1;
+  }
+
+  &:nth-child(6) {
+    top: 5%;
+    right: 8%;
+    width: 14%;
+    padding-bottom: 14%;
+    background-color: $--color-team-1;
+  }
+}

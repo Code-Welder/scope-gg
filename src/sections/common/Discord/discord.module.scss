@@ -1,0 +1,80 @@
+@import '../../../styles/variables';
+
+.sect {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+}
+
+.inner {
+  max-width: 964px;
+  width: 100%;
+  margin: auto auto auto 248px;
+  display: flex;
+  flex-direction: row;
+}
+
+.question {
+  max-width: 233px;
+  margin-right: auto;
+  padding-top: 46px;
+}
+
+.info {
+  padding-left: 30px;
+  max-width: 592px;
+  width: 100%;
+
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    padding-bottom: 80%;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+  }
+
+  &::before {
+    background-color: rgba($--color-team-1, .6);
+  }
+
+  &::after {
+    background-color: rgba($--color-team-2, .6);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+
+  img {
+    margin-right: 40px;
+  }
+}
+
+.list {
+  margin: 44px 0 65px;
+}
+
+.listItem {
+  position: relative;
+  margin-bottom: 16px;
+
+  &::before {
+    content: '->';
+    position: absolute;
+    top: 0;
+    left: -31px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

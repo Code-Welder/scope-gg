@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+
+.inner {
+  max-width: 1152px;
+  width: 100%;
+  margin: 0 auto;
+
+  &--bg {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;      
+      width: 25%;
+      padding-bottom: 25%;
+      border-radius: 50%;
+      filter: blur(60px);
+    }
+
+    &::before {
+      top: 10%;
+      left: -30%;
+      background-color: rgba($--color-team-1, .6);
+    }
+
+    &::after {
+      top: -25%;
+      left: -20%;
+      background-color: rgba($--color-team-2, .6);
+    }
+  }
+}
+
+.border {  
+  padding: 28px 0 16px;
+  border-top: 2px solid $--color-white10;
+  border-bottom: 2px solid $--color-white10;
+}
+
+.info {
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__left,
+  &__right {
+    display: flex;
+    width: 20%;
+  }
+
+  &__right {
+    justify-content: flex-end;
+  }
+}
+
+.players {
+  margin-top: 36px;
+}

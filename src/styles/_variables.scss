@@ -1,0 +1,20 @@
+// COLORS
+
+$--color-app-bg: #131415;
+
+$--color-white: #fff;
+$--color-white50: rgba($--color-white, .5);
+$--color-white30: rgba($--color-white, .3);
+$--color-white10: rgba($--color-white, .1);
+
+$--color-green: #27EA8C;
+$--color-red: #ff4545;
+$--color-blue: #4579FF;
+
+$--color-team-1: $--color-red;
+$--color-team-2: $--color-blue;
+
+// FONTS
+
+$--font-primary: 'Inter', sans-serif;
+$--font-secondary: 'Orbitron', sans-serif;

@@ -1,0 +1,161 @@
+@import '../../../styles/variables';
+
+.sect {
+  padding: 120px 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s;
+}
+
+.inner {
+  max-width: 890px;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+}
+
+.descr {
+  font-size: 20px;
+  max-width: 140px;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 150px;
+}
+
+.title {
+  display: flex;
+  flex-flow: wrap;
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+  border-bottom: 2px solid $--color-white10;
+}
+
+.teams {
+  margin: 28px 0 148px;
+  display: flex;
+  align-items: center;
+  font: 800 32px/124% $--font-secondary;
+}
+
+.teamsCross {
+  width: 12px;
+  height: 12px;
+  margin: 0 auto;
+  transform: rotate(-45deg);
+}
+
+.info {
+  display: flex;
+}
+
+.text {
+  text-align: right;
+}
+
+.infoDescr {
+  max-width: 95px;
+  width: 100%;
+  margin-right: 70px;
+}
+
+.circles {
+  position: relative;
+  min-width: 132px;
+  width: 132px;
+  height: 68px;
+  margin: 0 auto 48px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  width: 68px;
+  height: 68px;
+  border: 1px solid $--color-white;
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    left: 10%;
+    animation: moveFirstCircle 5s ease-in-out infinite alternate;
+  }
+
+  &:nth-child(2) {
+    right: 10%;
+    background: $--color-white;  
+    animation: moveSecondCircle 5s ease-in-out infinite alternate;
+  }
+}
+
+.bg {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: -20%;
+  left: -50%;
+  filter: blur(90px);
+  z-index: -1;
+  transition: opacity 1s;
+}
+
+.bgCircle {  
+  position: absolute;
+  top: 0;
+  width: 50%;
+  padding-bottom: 50%;
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    left: 10%;
+    background-color: rgba($--color-team-1, .6);
+    animation: moveBgCircle1 8s ease-in-out infinite alternate;
+  }
+
+  &:nth-child(2) {
+    right: 10%;
+    background-color: rgba($--color-team-2, .6);
+    animation: moveBgCircle2 8s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes moveFirstCircle {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(27%);
+  }
+}
+
+@keyframes moveSecondCircle {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-27%);
+  }
+}
+
+@keyframes moveBgCircle1 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(30%);
+  }
+}
+
+@keyframes moveBgCircle2 {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-30%);
+  }
+}

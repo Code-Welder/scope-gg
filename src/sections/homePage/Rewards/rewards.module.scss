@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+
+.sect {
+  padding-top: 120px;
+  padding-right: calc(50vw - 924px) !important;
+  padding-bottom: 60px;
+  display: flex;
+  transition: opacity 1s;
+}
+
+.inner { 
+  max-width: 1410px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 62px;
+  margin-bottom: 64px;
+  border-bottom: 2px solid $--color-white10;
+  position: relative;
+}
+
+.link {
+  transition: opacity .2s;
+  line-height: 1;
+  margin: auto 0 0 auto;
+
+  &:hover {
+    opacity: 1;
+  }}
+
+.circles {
+  display: inline-block;
+  position: relative;
+  min-width: 132px;
+  width: 132px;
+  height: 68px;
+  margin-left: 32px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  width: 68px;
+  height: 68px;
+  border: 1px solid $--color-white;
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    left: 10%;
+  }
+
+  &:nth-child(2) {
+    right: 10%;
+    background: $--color-white; 
+  }
+}

@@ -1,0 +1,138 @@
+@import '../../styles/variables';
+
+.bg {
+  position: relative;
+
+  &-2 {
+    .circle {
+      opacity: 1;
+      width: 15%;
+      padding-bottom: 15%;
+
+      &__t1 {
+        top: 15%;
+        left: 15%;
+      }
+
+      &__t2 {
+        top: 5%;
+        left: 20%;
+      }
+    }
+  }
+
+  &-3 {
+    .circle {
+      opacity: 0;
+      width: 15%;
+      top: 40%;
+      padding-bottom: 15%;
+
+      &__t1 {
+        left: 25%;
+      }
+
+      &__t2 {
+        left: 60%;
+      }
+    }
+  }
+
+  &-4 {
+    .circle {
+      opacity: 1;
+      width: 10%;
+      padding-bottom: 10%;
+
+      &__t1 {
+        top: 10%;
+        left: 60%;
+      }
+
+      &__t2 {
+        top: 15%;
+        left: 20%;
+      }
+    }
+  }
+
+  &-5 {
+    .circle {
+      opacity: 1;
+      width: 25%;
+      padding-bottom: 25%;
+      top: 5%;
+
+      &__t1 {
+        left: 15%;
+      }
+
+      &__t2 {
+        left: 60%;
+      }
+    }
+  }
+
+  &-6 {
+    .circle {
+      opacity: 0;
+      width: 15%;
+      padding-bottom: 15%;
+      top: 15%;
+      left: 40%;
+    }
+  }
+}
+
+.nav {
+  position: sticky;
+  top: 60%;
+  margin: 0 0 60px 36px;
+  transition: opacity .25s;
+}
+
+.circle {
+  position: fixed;
+  width: 30%;
+  padding-bottom: 30%;
+  border-radius: 50%;
+  top: 10%;
+  left: 35%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0;
+  transition: all 1.5s;
+
+  &__t1 {
+    background-color: rgba($--color-team-1, .6);
+  }
+
+  &__t2 {
+    background-color: rgba($--color-team-2, .6);
+  }
+}
+
+.rewards {
+  overflow-y: auto;
+}
+
+.rules {
+  margin-bottom: 250px;
+}
+
+.bottom {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.discord {
+  margin: 160px 0;
+}
+
+.advices {
+  margin-bottom: 260px;
+}

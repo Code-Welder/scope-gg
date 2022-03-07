@@ -1,0 +1,44 @@
+@import '../../../../styles/variables';
+
+.container {
+  display: flex;
+}
+
+.block {  
+  display: flex;
+  flex-flow: column;
+
+  &:nth-child(1) {
+    margin-right: 52px;
+  }
+
+  &:nth-child(2) {
+    margin-right: 102px;
+  }
+}
+
+.title {
+  margin-bottom: 50px;
+  font: 700 16px/132% $--font-primary;
+  text-transform: uppercase;
+  color: #767F8E;
+}
+
+.blockList {
+  li {
+    margin-bottom: 12px;
+    transition: opacity .25s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
+
+.email {
+  color: #6A5DAD;
+}

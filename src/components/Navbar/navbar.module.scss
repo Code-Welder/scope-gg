@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  color: $--color-white30;
+}
+
+.btn {
+  margin-bottom: 8px;
+  transition: color .25s;
+
+  &:hover {
+    color: $--color-white;
+  }
+
+  &.active {
+    display: flex;
+    align-items: center;
+    color: $--color-white;
+    pointer-events: none;
+
+    &::before {
+      content: '->';
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+}

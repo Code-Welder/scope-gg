@@ -1,0 +1,63 @@
+@import '../../../../../styles/variables';
+
+.board {
+  width: 100%;
+  margin-top: 36px;  
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.head {
+  font-size: 16px;
+  color: $--color-white50;
+
+  .row {
+    td {
+      padding: 0 0 18px;
+    }
+  }
+}
+
+.row {
+  width: 100%;
+  border-bottom: 2px solid $--color-white10;
+
+  td {
+    padding: 16px 0 18px;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 95px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &:nth-child(2) {
+      width: 100%;
+    }
+
+    &:nth-child(3) {
+      text-align: right;
+    }
+  }
+}
+
+.playerInfo {
+  display: flex;
+  align-items: center;
+}
+
+.player {
+  margin-right: auto;
+  transition: opacity .25s;
+
+  &:hover {
+    opacity: .5;
+  }
+}
+
+.playerShowmatch {
+  font-size: 16px;
+  color: $--color-white50;
+}

@@ -1,0 +1,14 @@
+@import '../../../../styles/variables';
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  margin: 0 8px;
+}
+
+.additional {
+  color: $--color-white50;
+}

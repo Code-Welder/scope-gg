@@ -1,0 +1,29 @@
+@import '../../../../../styles/variables';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  min-width: 650px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  &__top,
+  &__bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__top {
+    margin-bottom: 34px;
+  }
+}
+
+.score {
+  font: 900 44px/148% $--font-secondary;
+}

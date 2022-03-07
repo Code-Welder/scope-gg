@@ -1,0 +1,11 @@
+@import '../../../../../styles/variables';
+
+.wrapper {
+  padding: 13px 20px;
+  background-color: $--color-white10;
+  border-radius: 48px;
+
+  span {
+    margin-right: 14px;
+  }
+}

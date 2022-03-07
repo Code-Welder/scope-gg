@@ -1,0 +1,23 @@
+@import '../../../../styles/variables';
+
+.list {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.item {
+  padding: 10px 15px;
+  margin-right: 20;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background .2s;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    background-color: $--color-white10;
+  }
+}

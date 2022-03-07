@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.info {  
+  display: flex;
+  align-items: center;
+}
+
+.avatarWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid;
+  padding: 2px;
+  overflow: hidden;
+  margin-right: 12px;
+
+  &--t1 {
+    border-color: $--color-team-1;
+  }
+
+  &--t2 {
+    border-color: $--color-team-2;
+  }
+}
+
+.avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}

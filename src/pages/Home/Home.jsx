@@ -213,6 +213,8 @@ const Home2 = () => {
         setNavActive('intro')
         break;
       case 2:
+        rewards.current.scrollTo(0, 0)
+        enableBlockScrolling()
         rewards.current.scrollIntoView({ behavior: 'smooth' });
         setNavActive('rewards')
         break;

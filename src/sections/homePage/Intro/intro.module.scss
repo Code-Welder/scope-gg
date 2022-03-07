@@ -110,13 +110,13 @@
   &:nth-child(1) {
     left: 10%;
     background-color: rgba($--color-team-1, .6);
-    animation: moveBgCircle1 8s ease-in-out infinite alternate;
+    animation: moveBgCircle1 5s ease-in-out infinite alternate;
   }
 
   &:nth-child(2) {
     right: 10%;
     background-color: rgba($--color-team-2, .6);
-    animation: moveBgCircle2 8s ease-in-out infinite alternate;
+    animation: moveBgCircle2 5s ease-in-out infinite alternate;
   }
 }
 

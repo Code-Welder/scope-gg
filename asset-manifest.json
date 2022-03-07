@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/scope-gg/static/css/main.c7580622.css",
-    "main.js": "/scope-gg/static/js/main.e1d37075.js",
+    "main.css": "/scope-gg/static/css/main.450e97d0.css",
+    "main.js": "/scope-gg/static/js/main.2cb74e84.js",
     "static/media/Anarchy.png": "/scope-gg/static/media/Anarchy.ba6afee7e4fa93d21498.png",
     "static/media/banner.jpg": "/scope-gg/static/media/banner.21bbe89a679b2a1a73df.jpg",
     "static/media/Player_Two.png": "/scope-gg/static/media/Player_Two.ef69afe4dfc97433afc9.png",
@@ -31,11 +31,11 @@
     "static/media/Youtube.svg": "/scope-gg/static/media/Youtube.09c2035ce304a0dc0d7fc3bc56ac7b51.svg",
     "index.html": "/scope-gg/index.html",
     "static/media/cross.svg": "/scope-gg/static/media/cross.bc6b21893668834bc220b86f09e0ea24.svg",
-    "main.c7580622.css.map": "/scope-gg/static/css/main.c7580622.css.map",
-    "main.e1d37075.js.map": "/scope-gg/static/js/main.e1d37075.js.map"
+    "main.450e97d0.css.map": "/scope-gg/static/css/main.450e97d0.css.map",
+    "main.2cb74e84.js.map": "/scope-gg/static/js/main.2cb74e84.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7580622.css",
-    "static/js/main.e1d37075.js"
+    "static/css/main.450e97d0.css",
+    "static/js/main.2cb74e84.js"
   ]
 }

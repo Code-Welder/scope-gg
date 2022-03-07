@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/scope-gg/static/css/main.bc648ba6.css",
-    "main.js": "/scope-gg/static/js/main.838c33e5.js",
+    "main.css": "/scope-gg/static/css/main.c7580622.css",
+    "main.js": "/scope-gg/static/js/main.e1d37075.js",
     "static/media/Anarchy.png": "/scope-gg/static/media/Anarchy.ba6afee7e4fa93d21498.png",
     "static/media/banner.jpg": "/scope-gg/static/media/banner.21bbe89a679b2a1a73df.jpg",
     "static/media/Player_Two.png": "/scope-gg/static/media/Player_Two.ef69afe4dfc97433afc9.png",
@@ -21,19 +21,21 @@
     "static/media/logo.svg": "/scope-gg/static/media/logo.2a6ebcd0a1bd208eaef587a83cd776fb.svg",
     "static/media/powered-by.svg": "/scope-gg/static/media/powered-by.534c09a2d63643ed208c2f0a45f14880.svg",
     "static/media/Instagram.svg": "/scope-gg/static/media/Instagram.136b67b92d9e7c51a61e5fbf3e9ce594.svg",
+    "static/media/steam.svg": "/scope-gg/static/media/steam.df1d6041cab74eec5457935694f5003a.svg",
     "static/media/discord-icon.svg": "/scope-gg/static/media/discord-icon.19fe747d5532c9b5b15e78dc8c3169a5.svg",
     "static/media/stream-icon.svg": "/scope-gg/static/media/stream-icon.39d15ebd1a7415eaddd76c6bb535d1e3.svg",
+    "static/media/faceit.svg": "/scope-gg/static/media/faceit.9a1ab236549f6ddd7466d2210185d2e8.svg",
     "static/media/Discord.svg": "/scope-gg/static/media/Discord.73ad85770c45a1bfd34fd8ee1dc1771d.svg",
     "static/media/VK.svg": "/scope-gg/static/media/VK.d361097af5068a57af741cb513b76e7d.svg",
     "static/media/Twitter.svg": "/scope-gg/static/media/Twitter.c3b0b77301ee40a8fe6f05e6967c12ed.svg",
     "static/media/Youtube.svg": "/scope-gg/static/media/Youtube.09c2035ce304a0dc0d7fc3bc56ac7b51.svg",
     "index.html": "/scope-gg/index.html",
     "static/media/cross.svg": "/scope-gg/static/media/cross.bc6b21893668834bc220b86f09e0ea24.svg",
-    "main.bc648ba6.css.map": "/scope-gg/static/css/main.bc648ba6.css.map",
-    "main.838c33e5.js.map": "/scope-gg/static/js/main.838c33e5.js.map"
+    "main.c7580622.css.map": "/scope-gg/static/css/main.c7580622.css.map",
+    "main.e1d37075.js.map": "/scope-gg/static/js/main.e1d37075.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc648ba6.css",
-    "static/js/main.838c33e5.js"
+    "static/css/main.c7580622.css",
+    "static/js/main.e1d37075.js"
   ]
 }

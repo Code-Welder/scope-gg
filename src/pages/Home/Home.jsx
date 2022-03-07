@@ -10,11 +10,12 @@ import Join from '../../sections/homePage/Join/Join';
 import Discord from '../../sections/common/Discord/Discord';
 import Advices from '../../sections/homePage/Advices/Advices';
 import Navbar from '../../components/Navbar/Navbar';
+import Modal from '../../components/Modal/Modal';
 
 const Home2 = () => {
   const [sectionInView, setSectionInView] = useState(1);
   const [navActive, setNavActive] = useState('intro')
-  const [showNav, toggleShowNav] = useState(true)
+  const [showModal, toggleShowModal] = useState(false)
   const [ruleNum, setRulNum] = useState(1);
   const [blockScrolling, setBlockScrolling] = useState(false);
 
@@ -60,6 +61,11 @@ const Home2 = () => {
         setNavActive(null)
         break;
     }
+  }
+
+  const handleOpenModal = () => {
+    toggleShowModal(true)
+    setBlockScrolling(true)
   }
 
   const scrollDown = (sectionInView) => {
@@ -238,7 +244,7 @@ const Home2 = () => {
       <div className={clsx(style.circle, style.circle__t1)}></div>
       <div className={clsx(style.circle, style.circle__t2)}></div>
 
-      <div className={style.nav} style={{opacity: showNav ? 1 : 0}}>
+      <div className={style.nav}>
         <Navbar btnCallback={navHandler} activeBtnValue={navActive}/>
       </div>
 
@@ -258,8 +264,18 @@ const Home2 = () => {
         <Showmatch showSect={sectionInView === 4 ? true : false} />
       </div>
 
-      <div className={clsx(style.showmatch)} ref={join}>
-        <Join showSect={sectionInView === 5 ? true : false} />
+      <div className={clsx(style.join)} ref={join}>
+        <Join 
+          showSect={sectionInView === 5 ? true : false} 
+          btn1OnClick={handleOpenModal}
+          btn2OnClick={handleOpenModal}
+        />
+        <Modal 
+          isOpen={showModal} 
+          onClose={() => {
+            toggleShowModal(false)
+            setBlockScrolling(false)
+          }}/>
       </div>
 
       <div className={clsx(style.bottom, sectionInView === 6 && style.show)} ref={bottom}>

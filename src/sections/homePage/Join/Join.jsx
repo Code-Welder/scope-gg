@@ -11,7 +11,6 @@ const Join = forwardRef((props, ref) => {
 
   return (
     <section
-      id="intro" 
       ref={ref} 
       className={clsx('section section--100vh', style.sect)} 
       style={{ opacity: showSect ? '1' : '0'}}

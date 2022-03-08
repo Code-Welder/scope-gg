@@ -55,3 +55,16 @@
   margin-left: 22px;
   color: #767F8E;
 }
+
+
+@media screen and (max-width: 1600px) {
+  .block {
+    &:nth-child(1) {
+      width: 40%;
+    }
+
+    &:nth-child(2) {
+      width: 60%;
+    }
+  }
+}

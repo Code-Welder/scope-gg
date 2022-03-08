@@ -242,9 +242,13 @@ const Home2 = () => {
   }, [sectionInView]);
 
   return (
-    <main onWheel={handleOnWheel} className={clsx(style.bg, style[`bg-${sectionInView}`])}>
-      <div className={clsx(style.circle, style.circle__t1)}></div>
-      <div className={clsx(style.circle, style.circle__t2)}></div>
+    <main onWheel={handleOnWheel}>
+      <div className={clsx('section', style.bg)}>
+        <div className={clsx(style.bg__inner, style[`bg__inner-${sectionInView}`])}>
+          <div className={clsx(style.circle, style.circle__t1)}></div>
+          <div className={clsx(style.circle, style.circle__t2)}></div>
+        </div>
+      </div>
 
       <div className={style.nav}>
         <Navbar btnCallback={navHandler} activeBtnValue={navActive}/>

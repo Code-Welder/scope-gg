@@ -170,3 +170,17 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .inner {
+    width: 80%;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .rule {
+    max-width: 675px;
+  }
+}

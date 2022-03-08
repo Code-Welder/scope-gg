@@ -51,7 +51,7 @@ export const Context = React.createContext({
       }).map((user, i) =>  ({...user, place: ++i}))
     },
 
-    winner: null
+    winner: 'Novke'
   },
 
   showmatch: {

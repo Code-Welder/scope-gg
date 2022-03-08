@@ -59,7 +59,7 @@ const Rules = forwardRef((props, ref) => {
     >
       <div className={style.inner}>
         <div className={style.header}>
-          <h2 className="title title--md">The rules</h2>
+          <h2 className={clsx(style.title, 'title title--md')}>The rules</h2>
 
           <p className={style.rule}>
             <span className={style.number}>{ruleNum}</span>

@@ -133,3 +133,18 @@
     background-color: $--color-team-1;
   }
 }
+
+@media screen and (max-width: 1600px) {
+  .title {
+    font-size: 134px;
+  }
+
+  .arrow {
+    width: 58px;
+    height: 96px;
+  }
+
+  .body {
+    margin-left: 390px;
+  }
+}

@@ -4,16 +4,23 @@
   padding-top: 155px;
   padding-bottom: 95px;
   display: flex;
+}
+
+.inner {
+  max-width: 1305px;
+  width: 100%;
+  margin: auto;
+  display: flex;
   position: relative;
 
   &::before,
   &::after {
     content: '';
     position: absolute;
-    top: 30%;
-    left: 25%;
-    width: 25%;
-    padding-bottom: 25%;
+    top: 10%;
+    left: 15%;
+    width: 40%;
+    padding-bottom: 40%;
     border-radius: 50%;
     filter: blur(60px);
     z-index: -1;
@@ -26,13 +33,6 @@
   &::after {
     background-color: rgba($--color-team-2, .6);
   }
-}
-
-.inner {
-  max-width: 1305px;
-  width: 100%;
-  margin: auto;
-  display: flex;
 }
 
 .question {

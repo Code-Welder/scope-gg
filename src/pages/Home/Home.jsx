@@ -27,11 +27,12 @@ const Home2 = () => {
   const bottom = useRef();
 
   const enableBlockScrolling = () => {
+    if (blockScrolling) return
     setBlockScrolling(true);
 
     setTimeout(() => {
       setBlockScrolling(false);
-    }, 800);
+    }, 1000);
   };
 
   const navHandler = (value) => {
@@ -74,6 +75,7 @@ const Home2 = () => {
     switch (sectionInView) {
       case 1:
         setSectionInView(2);
+        enableBlockScrolling();
         break;
 
       case 2:
@@ -120,6 +122,7 @@ const Home2 = () => {
         break;
 
       case 6:
+        enableBlockScrolling();
         break;
 
       default:
@@ -187,12 +190,20 @@ const Home2 = () => {
   const handleOnWheel = (e) => {
     const direction = e.deltaY > 0 ? 'down' : 'up';
 
+    if (blockScrolling === true) return
+
     if (direction === 'down') {
       scrollDown(sectionInView);
     } else if (direction === 'up') {
       scrollUp(sectionInView);
     }
   };
+
+  const scrollToRefWithDalay = (ref) => {
+    setTimeout(() => {
+      ref.current.scrollIntoView({ behavior: 'smooth' })
+    }, 0);
+  }
 
   useEffect(() => {
     document.body.classList.add('no-scroll');
@@ -205,41 +216,44 @@ const Home2 = () => {
   }, []);
 
   useEffect(() => {
-    document.body.classList.add('no-scroll');
-
     switch (sectionInView) {
-      case 1:
+      case 1:        
+        document.body.classList.add('no-scroll');
         intro.current.scrollIntoView({ behavior: 'smooth' });
+        scrollToRefWithDalay(intro)
         setNavActive('intro')
         break;
-      case 2:
+      case 2:        
+        document.body.classList.add('no-scroll');
         rewards.current.scrollTo(0, 0)
-        enableBlockScrolling()
         rewards.current.scrollIntoView({ behavior: 'smooth' });
         setNavActive('rewards')
         break;
-      case 3:
+      case 3:        
+        document.body.classList.add('no-scroll');
         rules.current.scrollIntoView({ behavior: 'smooth' });
         setNavActive('rules')
         break;
-      case 4:
+      case 4:        
+        document.body.classList.add('no-scroll');
         showmatch.current.scrollIntoView({ behavior: 'smooth' });
         setNavActive('showmatch')
         break;
-      case 5:
+      case 5:        
+        document.body.classList.add('no-scroll');
         join.current.scrollIntoView({ behavior: 'smooth' });
         setNavActive('join')
         break;
       case 6:
-        bottom.current.scrollIntoView({ behavior: 'smooth' });
         document.body.classList.remove('no-scroll');
+        bottom.current.scrollIntoView({ behavior: 'smooth' });
         setNavActive('')
         break;
 
       default:
         break;
     }
-  }, [sectionInView]);
+  }, [sectionInView, enableBlockScrolling]);
 
   return (
     <main onWheel={handleOnWheel}>

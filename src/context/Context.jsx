@@ -4,7 +4,7 @@ import avatar from '../assets/userAvatar.png';
 export const Context = React.createContext({
   event: {
     status: 'started', // started, end, waiting
-    day: 1,
+    day: 2,
     map: 'de_dust2',
 
     startAt: {
@@ -21,7 +21,11 @@ export const Context = React.createContext({
   user: {
     isAuth: true,
     avatar: avatar,
-    team: 1
+    team: 1,
+    place: 1533,
+    name: 'Evkon',
+    link: '#',
+    score: 11
   },
 
   teams: {

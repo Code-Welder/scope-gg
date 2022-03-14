@@ -19,6 +19,7 @@ const Header = () => {
   let eventStatusText = '';
   let diodColor = '';
   let hideDiod = false;
+  let day = null
 
   let dayInfoText = '';
   let dayInfoAdditional = '';
@@ -29,6 +30,7 @@ const Header = () => {
       diodColor = 'green';
       dayInfoText = 'Today you need to win on the';
       dayInfoAdditional = event.map;
+      day = event.day;
       break;
 
     case 'waiting':
@@ -58,7 +60,7 @@ const Header = () => {
 
         <Event text={eventStatusText} hideDiod={hideDiod} diodColor={diodColor} />
 
-        <DayInfo day={event.day} mainText={dayInfoText} additional={dayInfoAdditional} />
+        <DayInfo day={day} mainText={dayInfoText} additional={dayInfoAdditional} />
 
         <Nav />
 

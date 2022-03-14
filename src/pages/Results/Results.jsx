@@ -12,28 +12,24 @@ import { Context } from '../../context/Context';
 
 const Results = () => {
   const { event, user, teams, totalPlayers, showmatch } = useContext(Context);
-  const [showSect, toggleShowSect] = useState(false);
+  // const [showSect, toggleShowSect] = useState(false);
 
   useEffect(() => {
-    const scrollToTop = (scrollDuration) => {
-      const scrollStep = -window.scrollY / (scrollDuration / 15),
-        scrollInterval = setInterval(function () {
-          if (window.scrollY !== 0) {
-            window.scrollBy(0, scrollStep);
-          } else clearInterval(scrollInterval);
-        }, 15);
-    };
-
-    toggleShowSect(true);
-    scrollToTop(15);
-
-    return () => {
-      toggleShowSect(false);
-    };
+    // const scrollToTop = (scrollDuration) => {
+    //   const scrollStep = -window.scrollY / (scrollDuration / 15),
+    //     scrollInterval = setInterval(function () {
+    //       if (window.scrollY !== 0) {
+    //         window.scrollBy(0, scrollStep);
+    //       } else clearInterval(scrollInterval);
+    //     }, 15);
+    // };
+    
+    // scrollToTop(15);
+    window.scrollTo(0, 0)
   }, []);
 
   return (
-    <main className={clsx(style.container, showSect && style.show)}>
+    <main className={clsx(style.container, style.show)}>
       {teams.winner ? <Winner teamName={teams.winner} teamNumber="1" /> : undefined}
 
       <ScoreBoard
@@ -48,7 +44,7 @@ const Results = () => {
 
       <Showmatch team1={teams[1]} team2={teams[2]} showmatch={showmatch} />
 
-      <LeaderBoard teams={teams} />
+      <LeaderBoard teams={teams} user={user} />
       <Discord />
     </main>
   );

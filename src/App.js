@@ -18,9 +18,8 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="results" element={<Results />} />          
-          <Route path="*" element={<Home />} />
+          <Route path="/scope-gg" element={<Home />} />
+          <Route path="/scope-gg/results" element={<Results />} />  
         </Routes>
 
         <Banner img={bannerJpg} imgWebp={bannerWebp} link="#" />

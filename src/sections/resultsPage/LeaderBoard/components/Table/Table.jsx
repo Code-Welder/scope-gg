@@ -2,7 +2,7 @@ import React from 'react';
 import style from './table.module.scss';
 import TableRow from './TableRow';
 
-const Table = ({players}) => {
+const Table = ({players, user = null}) => {
   return (
 <table className={style.board}>
       <thead className={style.head}>
@@ -28,6 +28,21 @@ const Table = ({players}) => {
               />
             )
           })
+        }
+
+        {
+          user && user.place > 10
+          ? <TableRow 
+              key={user.place}
+              place={user.place} 
+              name={user.name} 
+              team={user.team}
+              avatar={user.avatar}
+              link={user.link}
+              score={user.score}
+              showYouText={true}
+            />
+          : undefined
         }
       </tbody>    
     </table>

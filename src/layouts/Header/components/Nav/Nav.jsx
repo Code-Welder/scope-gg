@@ -6,11 +6,11 @@ const Nav = () => {
   return (
     <ul className={style.list}>
       <li className={style.item}>
-        <Link to='/'>Rules</Link>
+        <Link to='scope-gg'>Rules</Link>
       </li>
 
       <li className={style.item}>
-        <Link to='results'>Results</Link>
+        <Link to='scope-gg/results'>Results</Link>
       </li>
     </ul>
   );

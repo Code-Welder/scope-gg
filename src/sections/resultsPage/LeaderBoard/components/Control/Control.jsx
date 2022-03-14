@@ -2,7 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import style from './control.module.scss';
 
-const Control = ({teams}) => {
+const Control = ({teams, daysGone}) => {
 
   return (
     <div className={style.bar}>
@@ -16,8 +16,8 @@ const Control = ({teams}) => {
         <span className={style.title}>Day:</span>
         <div className={style.daysBtns}>
           <button className={clsx(style.daysBtn, style.active)}>All</button>
-          <button className={style.daysBtn}>1</button>
-          <button className={style.daysBtn}>2</button>
+          <button className={clsx(style.daysBtn)}>1</button>
+          <button className={clsx(style.daysBtn)}>2</button>
           <button className={clsx(style.daysBtn, style.disabled)}>3</button>
           <button className={clsx(style.daysBtn, style.disabled)}>4</button>
           <button className={clsx(style.daysBtn, style.disabled)}>5</button>

@@ -1,9 +1,10 @@
 import React from 'react';
+import clsx from 'clsx';
 import style from './table.module.scss'
 import User from '../../../../../components/User/User';
 
 const TableRow = (props) => {
-  const {place, name, team, avatar, link, score} = props
+  const {place, name, team, avatar, link, score, showYouText} = props
 
   return (
     <tr className={style.row}>
@@ -13,14 +14,23 @@ const TableRow = (props) => {
 
       <td className={style.cell}>
         <div className={style.playerInfo}>
-          <a href={link} className={style.player}>
+          <a 
+            href={link} 
+            className={style.player} 
+            style={{marginRight: showYouText && '5px'}}
+          >
             <User name={name} avatar={avatar} teamNumber={team} />      
           </a>
 
           {
             place <= 5 
-            ? <p className={style.playerShowmatch}>Showmatch</p>
-            : ''
+            ? <span className={style.playerShowmatch}>Showmatch</span>
+            : undefined
+          }
+          {
+            showYouText
+            ? <span className='text--light'>(You)</span>
+            : undefined
           }
         </div>
       </td>

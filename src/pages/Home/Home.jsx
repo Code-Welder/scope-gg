@@ -14,8 +14,8 @@ import Modal from '../../components/Modal/Modal';
 
 const Home2 = () => {
   const [sectionInView, setSectionInView] = useState(1);
-  const [navActive, setNavActive] = useState('intro')
-  const [showModal, toggleShowModal] = useState(false)
+  const [navActive, setNavActive] = useState('intro');
+  const [showModal, toggleShowModal] = useState(false);
   const [ruleNum, setRulNum] = useState(1);
   const [blockScrolling, setBlockScrolling] = useState(false);
 
@@ -27,7 +27,7 @@ const Home2 = () => {
   const bottom = useRef();
 
   const enableBlockScrolling = () => {
-    if (blockScrolling) return
+    if (blockScrolling) return;
     setBlockScrolling(true);
 
     setTimeout(() => {
@@ -38,36 +38,36 @@ const Home2 = () => {
   const navHandler = (value) => {
     switch (value) {
       case 'intro':
-        setSectionInView(1)
-        setNavActive('intro')
+        setSectionInView(1);
+        setNavActive('intro');
         break;
       case 'rewards':
-        setSectionInView(2)
-        setNavActive('intro')
+        setSectionInView(2);
+        setNavActive('intro');
         break;
       case 'rules':
-        setSectionInView(3)
-        setNavActive('rules')
+        setSectionInView(3);
+        setNavActive('rules');
         break;
       case 'showmatch':
-        setSectionInView(4)
-        setNavActive('showmatch')
+        setSectionInView(4);
+        setNavActive('showmatch');
         break;
       case 'join':
-        setSectionInView(5)
-        setNavActive('join')
+        setSectionInView(5);
+        setNavActive('join');
         break;
-    
+
       default:
-        setNavActive(null)
+        setNavActive(null);
         break;
     }
-  }
+  };
 
   const handleOpenModal = () => {
-    toggleShowModal(true)
-    setBlockScrolling(true)
-  }
+    toggleShowModal(true);
+    setBlockScrolling(true);
+  };
 
   const scrollDown = (sectionInView) => {
     if (blockScrolling) return;
@@ -177,8 +177,8 @@ const Home2 = () => {
 
       case 6:
         if (bottom.current.getBoundingClientRect().top >= 0) {
-          setSectionInView(5);
           enableBlockScrolling();
+          setSectionInView(5);
         }
         break;
 
@@ -190,7 +190,7 @@ const Home2 = () => {
   const handleOnWheel = (e) => {
     const direction = e.deltaY > 0 ? 'down' : 'up';
 
-    if (blockScrolling === true) return
+    if (blockScrolling === true) return;
 
     if (direction === 'down') {
       scrollDown(sectionInView);
@@ -199,11 +199,9 @@ const Home2 = () => {
     }
   };
 
-  const scrollToRefWithDalay = (ref) => {
-    setTimeout(() => {
-      ref.current.scrollIntoView({ behavior: 'smooth' })
-    }, 0);
-  }
+  const handleScrollToRef = (ref) => {
+    window.scrollTo(0, ref.current.offsetTop);
+  };
 
   useEffect(() => {
     document.body.classList.add('no-scroll');
@@ -216,44 +214,40 @@ const Home2 = () => {
   }, []);
 
   useEffect(() => {
+    document.body.classList.add('no-scroll');
+
     switch (sectionInView) {
-      case 1:        
-        document.body.classList.add('no-scroll');
-        intro.current.scrollIntoView({ behavior: 'smooth' });
-        scrollToRefWithDalay(intro)
-        setNavActive('intro')
+      case 1:
+        handleScrollToRef(intro);
+        setNavActive('intro');
         break;
-      case 2:        
-        document.body.classList.add('no-scroll');
-        rewards.current.scrollTo(0, 0)
-        rewards.current.scrollIntoView({ behavior: 'smooth' });
-        setNavActive('rewards')
+      case 2:
+        handleScrollToRef(rewards);
+        rewards.current.scrollTo(0, 5);
+        setNavActive('rewards');
         break;
-      case 3:        
-        document.body.classList.add('no-scroll');
-        rules.current.scrollIntoView({ behavior: 'smooth' });
-        setNavActive('rules')
+      case 3:
+        handleScrollToRef(rules)
+        setNavActive('rules');
         break;
-      case 4:        
-        document.body.classList.add('no-scroll');
-        showmatch.current.scrollIntoView({ behavior: 'smooth' });
-        setNavActive('showmatch')
+      case 4:
+        handleScrollToRef(showmatch)
+        setNavActive('showmatch');
         break;
-      case 5:        
-        document.body.classList.add('no-scroll');
-        join.current.scrollIntoView({ behavior: 'smooth' });
-        setNavActive('join')
+      case 5:
+        handleScrollToRef(join)
+        setNavActive('join');
         break;
-      case 6:
+      case 6:        
+        handleScrollToRef(bottom)
         document.body.classList.remove('no-scroll');
-        bottom.current.scrollIntoView({ behavior: 'smooth' });
-        setNavActive('')
+        setNavActive('');
         break;
 
       default:
         break;
     }
-  }, [sectionInView, enableBlockScrolling]);
+  }, [sectionInView]);
 
   return (
     <main onWheel={handleOnWheel}>
@@ -265,7 +259,7 @@ const Home2 = () => {
       </div>
 
       <div className={style.nav}>
-        <Navbar btnCallback={navHandler} activeBtnValue={navActive}/>
+        <Navbar btnCallback={navHandler} activeBtnValue={navActive} />
       </div>
 
       <div className={clsx(style.intro)} ref={intro}>
@@ -285,17 +279,18 @@ const Home2 = () => {
       </div>
 
       <div className={clsx(style.join)} ref={join}>
-        <Join 
-          showSect={sectionInView === 5 ? true : false} 
+        <Join
+          showSect={sectionInView === 5 ? true : false}
           btn1OnClick={handleOpenModal}
           btn2OnClick={handleOpenModal}
         />
-        <Modal 
-          isOpen={showModal} 
+        <Modal
+          isOpen={showModal}
           onClose={() => {
-            toggleShowModal(false)
-            setBlockScrolling(false)
-          }}/>
+            toggleShowModal(false);
+            setBlockScrolling(false);
+          }}
+        />
       </div>
 
       <div className={clsx(style.bottom, sectionInView === 6 && style.show)} ref={bottom}>

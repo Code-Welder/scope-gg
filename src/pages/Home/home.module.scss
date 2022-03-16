@@ -95,6 +95,17 @@
   }
 }
 
+.sect,
+.rewards {
+  height: 100vh;
+  transition: opacity 1.5s;
+  opacity: 0;
+}
+
+.rewards {
+  overflow-y: auto;
+}
+
 .circle {
   position: absolute;
   width: 30%;
@@ -123,10 +134,6 @@
   transition: opacity .25s;
   max-width: 220px;
   z-index: 10;
-}
-
-.rewards {
-  overflow-y: auto;
 }
 
 .rules {

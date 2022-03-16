@@ -1,4 +1,4 @@
-import React, { useContext, forwardRef } from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import style from './intro.module.scss';
 
@@ -6,17 +6,14 @@ import crossIcon from '../../../assets/icons/cross.svg';
 
 import { Context } from '../../../context/Context';
 
-const Intro = forwardRef((props, ref) => {
+const Intro =(props) => {
   const { teams } = useContext(Context);
-  const { showSect, ...others } = props
 
   return (
     <section 
       id="intro" 
-      ref={ref} 
-      className={clsx('section section--100vh', style.sect)} 
-      style={{ opacity: showSect ? '1' : '0'}}
-      {...others}
+      className={clsx('section', style.sect)} 
+      {...props}
     >
       <div className={style.inner}>
         <div className={style.bg}>
@@ -55,6 +52,6 @@ const Intro = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default Intro;

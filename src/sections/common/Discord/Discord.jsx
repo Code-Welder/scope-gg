@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import React from 'react';
 import style from './discord.module.scss'
 
+import socialLinks from '../../../constants/socialLinks'
+
 import discordIcon from './assets/discord-icon.svg'
 
 const listItems = [
@@ -34,10 +36,11 @@ const Discord = () => {
           </ul>
 
           <a 
-            href='#' 
+            href={socialLinks.discord} 
             className={clsx('btn btn--neutral', style.link)} 
             style={{ padding: '13px 40px' }}
             target="_blank"
+            rel="noopener noreferrer"
           >
             Join discord
           </a>

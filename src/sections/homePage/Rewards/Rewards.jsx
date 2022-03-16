@@ -1,18 +1,14 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import style from './rewards.module.scss';
 
 import SkinList from './components/Skins/SkinList';
 
-const Rewards = forwardRef((props, ref) => {
-  const { showSect, ...others } = props;
+const Rewards = (props) => { 
   return (
     <section
-      id="rewards"
-      ref={ref}
-      className={clsx(style.sect, 'section section--100vh no-scrollbar')}
-      style={{ opacity: showSect ? '1' : '0' }}
-      {...others}
+      className={clsx(style.sect, 'section')}
+      {...props}
     >
       <div className={style.inner}>
         <div className={style.header}>
@@ -37,6 +33,6 @@ const Rewards = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+}
 
 export default Rewards;

@@ -1,13 +1,13 @@
-import React, { useContext, forwardRef } from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import style from './rules.module.scss';
 
 import DotsList from '../../../components/DotsList/DotsList';
 import { Context } from '../../../context/Context';
 
-const Rules = forwardRef((props, ref) => {
+const Rules = (props) => {
   const { teams } = useContext(Context);
-  let { ruleNum, showSect, onRulesAnimationEnd, hide, ...others} = props
+  let { ruleNum, onRulesAnimationEnd, hide, ...others} = props
 
   if (!ruleNum) {
     ruleNum = 1
@@ -52,9 +52,7 @@ const Rules = forwardRef((props, ref) => {
   return (
     <section 
       id="rules" 
-      ref={ref} 
       className={clsx('section section--100vh', style.sect)} 
-      style={{ opacity: showSect ? '1' : '0' }}
       {...others}
     >
       <div className={style.inner}>
@@ -96,6 +94,6 @@ const Rules = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default Rules;

@@ -3,13 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './layouts/Header/Header';
 import Footer from './layouts/Footer/Footer';
-
-import Home from './pages/Home/Home';
-import Results from './pages/Results/Results';
 import Banner from './components/Banner/Banner';
 
 import bannerJpg from './assets/banner.jpg';
 import bannerWebp from './assets/banner.webp';
+
+import paths from './constants/paths';
 
 function App() {
   return (
@@ -18,8 +17,8 @@ function App() {
         <Header />
 
         <Routes>
-          <Route path="/scope-gg" element={<Home />} />
-          <Route path="/scope-gg/results" element={<Results />} />  
+          <Route path={paths.home.path} element={paths.home.component} />
+          <Route path={paths.results.path} element={paths.results.component} />
         </Routes>
 
         <Banner img={bannerJpg} imgWebp={bannerWebp} link="#" />

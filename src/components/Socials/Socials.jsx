@@ -1,36 +1,38 @@
 import React from 'react';
 import SocialsItem from './SocialIstem';
 
-import discord from './icons/Discord.svg'
-import inst from './icons/Instagram.svg'
-import twit from './icons/Twitter.svg'
-import vk from './icons/VK.svg'
-import youtube from './icons/Youtube.svg'
+import discord from './icons/Discord.svg';
+import inst from './icons/Instagram.svg';
+import twit from './icons/Twitter.svg';
+import vk from './icons/VK.svg';
+import youtube from './icons/Youtube.svg';
+
+import socialsLinks from '../../constants/socialLinks';
 
 const list = [
   {
     name: 'twitter',
-    link: 'https://twitter.com/scope_gg',
+    link: socialsLinks.twitter,
     icon: twit,
   },
   {
     name: 'vk',
-    link: 'https://vk.com/scopegg',
+    link: socialsLinks.vk,
     icon: vk,
   },
   {
     name: 'discord',
-    link: 'https://discord.com/invite/fPZkGHw',
+    link: socialsLinks.discord,
     icon: discord,
   },
   {
     name: 'youtube',
-    link: 'https://www.youtube.com/channel/UCAJJOQv8ZEJEuMuM3d3qD4g',
+    link: socialsLinks.youtube,
     icon: youtube,
   },
   {
     name: 'instagram',
-    link: 'https://www.instagram.com/scope_gg/',
+    link: socialsLinks.instagram,
     icon: inst,
   },
 ];

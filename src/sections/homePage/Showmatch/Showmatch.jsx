@@ -1,21 +1,18 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import style from './showmatch.module.scss';
 import streamIcon from './assets/stream-icon.svg';
 
 import { Context } from '../../../context/Context';
 
-const Showmatch = forwardRef((props, ref) => {
-  const { showSect, ...others } = props;
+const Showmatch = (props) => {
   const { showmatch } = useContext(Context);
 
   return (
     <section
       id="showmatch"
-      ref={ref}
-      className={clsx('section section--100vh', style.sect)}
-      style={{ opacity: showSect ? '1' : '0' }}
-      {...others}
+      className={clsx('section', style.sect)}
+      {...props}
     >
 
       <div className={style.inner}>
@@ -60,6 +57,6 @@ const Showmatch = forwardRef((props, ref) => {
       </div>
     </section>
   );
-});
+};
 
 export default Showmatch;

@@ -1,19 +1,19 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import style from './join.module.scss'
 
+import paths from '../../../constants/paths'
+
 import { Context } from '../../../context/Context';
 
-const Join = forwardRef((props, ref) => {
+const Join = (props) => {
   const { teams, totalPlayers } = useContext(Context)
-  const { showSect, btn1OnClick, btn2OnClick, ...others  } = props
+  const { btn1OnClick, btn2OnClick, ...others  } = props
 
   return (
     <section
-      ref={ref} 
-      className={clsx('section section--100vh', style.sect)} 
-      style={{ opacity: showSect ? '1' : '0'}}
+      className={clsx('section', style.sect)} 
       {...others}
     >
 
@@ -57,7 +57,7 @@ const Join = forwardRef((props, ref) => {
 
         <div className={style.bottom}>
           <span className={style.participants}>{totalPlayers} participants</span>
-          <Link to="results" className="btn btn--neutral" style={{padding: '10px 14px'}}>
+          <Link to={paths.results.path} className="btn btn--neutral" style={{padding: '10px 14px'}}>
             Results
           </Link>
         </div>
@@ -66,6 +66,6 @@ const Join = forwardRef((props, ref) => {
       
     </section>
   );
-});
+};
 
 export default Join;

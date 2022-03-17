@@ -11,25 +11,20 @@ import LeaderBoard from '../../sections/resultsPage/LeaderBoard/LeaderBoard';
 import { Context } from '../../context/Context';
 
 const Results = () => {
+  const [isVisibly, setIsVisibly] = useState(false)
   const { event, user, teams, totalPlayers, showmatch } = useContext(Context);
-  // const [showSect, toggleShowSect] = useState(false);
 
-  useEffect(() => {
-    // const scrollToTop = (scrollDuration) => {
-    //   const scrollStep = -window.scrollY / (scrollDuration / 15),
-    //     scrollInterval = setInterval(function () {
-    //       if (window.scrollY !== 0) {
-    //         window.scrollBy(0, scrollStep);
-    //       } else clearInterval(scrollInterval);
-    //     }, 15);
-    // };
-    
-    // scrollToTop(15);
+  useEffect(() => {    
+    setIsVisibly(true)
     window.scrollTo(0, 0)
+
+    return () => {
+      setIsVisibly(false)
+    }
   }, []);
 
   return (
-    <main className={clsx(style.container, style.show)}>
+    <main className={clsx(style.container, isVisibly && style.show)}>
       {teams.winner ? <Winner teamName={teams.winner} teamNumber="1" /> : undefined}
 
       <ScoreBoard

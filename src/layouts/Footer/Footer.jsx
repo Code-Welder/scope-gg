@@ -7,6 +7,8 @@ import Logo from '../../components/Logo/Logo'
 import Menu from './components/Menu/Menu';
 import Socials from '../../components/Socials/Socials';
 
+import paths from '../../constants/paths';
+
 import poweredByIcon from './assets/powered-by.svg'
 
 const Footer = () => {
@@ -15,7 +17,7 @@ const Footer = () => {
 
       <div className={style.inner}>
         <div className={style.block}>
-          <Link to="/" className={style.logo}>
+          <Link to={paths.home.path} className={style.logo}>
             <Logo />
           </Link>
 

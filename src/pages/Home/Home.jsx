@@ -13,6 +13,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Modal from '../../components/Modal/Modal';
 
 const Home = () => {
+  const [isVisibly, setIsVisibly] = useState(false)
   const [sectionInViewport, setSectionInViewport] = useState(1)
   const [canScroll, toggleCanScroll] = useState(true)
   const [ruleNum, setRulNum] = useState(1)
@@ -26,7 +27,7 @@ const Home = () => {
   const join = useRef();
   const bottom = useRef();
 
-  const debounceScroll = (ms = 600) => {
+  const debounceScroll = (ms = 1000) => {
     if (canScroll === false) return
 
     toggleCanScroll(false)
@@ -190,10 +191,12 @@ const Home = () => {
   useEffect(() => {
     document.body.classList.add('no-scroll');
     document.documentElement.classList.add('no-scrollbar');
+    setIsVisibly(true)
 
     return () => {
       document.body.classList.remove('no-scroll');
       document.documentElement.classList.remove('no-scrollbar');
+      setIsVisibly(false)
     };
   }, []);
 
@@ -238,7 +241,7 @@ const Home = () => {
   }, [sectionInViewport]);
 
   return (
-    <main onWheel={handleOnWheel}>
+    <main onWheel={handleOnWheel} className={clsx(style.main, isVisibly && style.show)}>
       <div className={clsx('section', style.bg)}>
         <div className={clsx(style.bg__inner, style[`bg__inner-${sectionInViewport}`])}>
           <div className={clsx(style.circle, style.circle__t1)}></div>

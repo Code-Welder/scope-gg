@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import clsx from 'clsx';
+import style from './header.module.scss';
 
 import Logo from '../../components/Logo/Logo';
 import Event from './components/Event/Event';
@@ -8,10 +10,9 @@ import Nav from './components/Nav/Nav';
 import User from '../../components/User/User';
 import Join from './components/Join/Join';
 
-import style from './header.module.scss';
+import paths from '../../constants/paths';
 
 import { Context } from '../../context/Context';
-import clsx from 'clsx';
 
 const Header = () => {
   const { event, user, teams } = useContext(Context);
@@ -54,7 +55,7 @@ const Header = () => {
   return (
     <header className={style.wrapper}>
       <div className={clsx(style.container, 'container')}>
-        <Link to="/">
+        <Link to={paths.home.path}>
           <Logo />
         </Link>
 
